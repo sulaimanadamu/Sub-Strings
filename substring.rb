@@ -3,6 +3,7 @@ def substrings(word, normal_case_dictionary)
     word = word.downcase
     dictionary = normal_case_dictionary.map(&:downcase)
 
+    #short version
     dictionary.each do |selected_word| 
         count = word.scan(selected_word).length
         unless count == 0
@@ -10,6 +11,8 @@ def substrings(word, normal_case_dictionary)
         end
     end
 
+    # longer version
+    
     # dictionary.each do | selected_word | 
     #     # are all of the character of the selected word member of the given word
     #     subset = selected_word.chars.all? { |dic_word| word.chars.include?(dic_word) }
